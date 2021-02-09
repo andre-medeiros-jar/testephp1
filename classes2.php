@@ -25,7 +25,9 @@
 
     }
     $doc = new CPF();
-    $doc->setValor("123456");
+    $doc->setValor("123454");
     echo $doc->getValor()."<br />";
-    var_dump($doc->validaCPF());
+    if ($doc->validaCPF() == true) echo "CPF: " . $doc->getValor(). " - CPF Válido!!!!";
+    else 
+        echo "CPF: ". $doc->getValor() . " CPF inválido!!!";
 ?>
